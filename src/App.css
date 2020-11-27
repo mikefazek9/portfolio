@@ -84,7 +84,6 @@ a:hover {
   height: 35px;
   border-radius: 20px;
   border: none;
-  font-size: 1rem;
   margin-right: 10px;
   font-family: "Roboto Slab", serif;
 }
@@ -94,21 +93,23 @@ a:hover {
   height: 35px;
   border-radius: 20px;
   border: none;
-  font-size: 1rem;
   font-family: "Roboto Slab", serif;
 }
 
 .btn-github:hover {
   cursor: pointer;
   transition: all 0.5s ease-out;
-  background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(25, 194, 206, 0.7);
 }
 .btn-linkedin:hover {
   cursor: pointer;
   transition: all 0.5s ease-out;
-  background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(11, 44, 235, 0.7);
 }
-
+.btn-hero {
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 /* About js */
 .about_section {
   display: flex;
