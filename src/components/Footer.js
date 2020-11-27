@@ -16,7 +16,7 @@ function Footer(props) {
           Facebook
         </a>
         <a href="mailto:mike.fazek@gmail.com" className="footlink">
-          gmail
+          Gmail
         </a>
       </div>
     </div>
