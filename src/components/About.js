@@ -3,6 +3,7 @@ import portImg from "../img/bkgry.jpg";
 export default function About(props) {
   return (
     <div className="about_section">
+    
       <h2 className="about_title">{props.title}</h2>
       <div className="about_content">
         <div className="about_image_content">
