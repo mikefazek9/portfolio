@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectsList from "./ProjectsList";
-function Projects() {
+import Aos from "aos";
+import "aos/dist/aos.css";
+const Projects=()=> {
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
   return (
     <div className="projects_section">
-      <h2 id="prj-heading">Projects...</h2>
+      <h2 data-aos="fade-up" id="prj-heading">Projects...</h2>
       {/* image 1 */}
       <div className="project_menu">
         <ProjectsList />

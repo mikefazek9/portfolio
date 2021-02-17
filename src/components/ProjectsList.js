@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 // imports ext
 import apipro from "../img/apipro.png";
 import advice from "../img/advice.png";
 import Tw from "../img/tw.png";
+import tch from "../img/tch.png";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-function ProjectsList() {
+const ProjectsList=()=> {
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[]);
   return (
     <>
-      <div className="projects_list">
+    {/* project 1 */}
+      <div data-aos="fade-right" className="projects_list">
         <a href="https://mikesrecipeapp.netlify.app/">
           <img src={apipro} alt="project1" className="project_image" />
         </a>
@@ -30,7 +37,7 @@ function ProjectsList() {
         </a>
       </div>
       {/* project number 2 */}
-      <div className="projects_list">
+      <div data-aos="fade-down" className="projects_list">
         <a href="https://advicegenerator1.netlify.app/">
           <img src={advice} alt="project1" className="project_image" />
         </a>
@@ -52,7 +59,7 @@ function ProjectsList() {
         </a>
       </div>
       {/* project 3 */}
-      <div className="projects_list">
+      <div data-aos="fade-up" className="projects_list">
         <a href="https://tammywideman.com/">
           <img src={Tw} alt="project3" className="project_image" />
         </a>
@@ -69,6 +76,29 @@ function ProjectsList() {
           />
         </a> */}
         <a href="https://tammywideman.com/" className="icons">
+          <WebIcon style={{ color: "white", fontSize: 40, paddingTop: 10 }} />
+        </a>
+      </div>
+      {/* project 4 TCH */}
+      <div data-aos="fade-left"className="projects_list">
+        <a href="https://taylorscustomhomes.netlify.app/index.html">
+          <img src={tch} alt="taylor custom homes" className="project_image" />
+        </a>
+        <div className="hover-detail">
+          <h3>Taylor Custom Homes</h3>
+          <p>
+            Technologies used HTML5, CSS3 and JavaScript.
+          </p>
+          <p>
+            Created sliding effect with JavaScript, converted powerpoint into a Video slideshow at clients request. utilized CSS for design.
+          </p>
+        </div>
+        <a href="https://github.com/mikefazek9/taylorcustoms" className="icons">
+          <GitHubIcon
+            style={{ color: "white", fontSize: 40, paddingTop: 10 }}
+          />
+        </a>
+        <a href="https://taylorscustomhomes.netlify.app/index.html/" className="icons">
           <WebIcon style={{ color: "white", fontSize: 40, paddingTop: 10 }} />
         </a>
       </div>

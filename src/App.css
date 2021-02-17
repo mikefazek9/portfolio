@@ -9,6 +9,7 @@
 body {
   background-color: #fff;
   font-family: "Roboto Slab", serif;
+  overflow-y: scroll;
 }
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -73,6 +74,7 @@ a:hover {
   background-color: #03a9f4;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 
   border-bottom: solid 3px #bdbdbd;
 }
@@ -80,34 +82,48 @@ a:hover {
   color: rgb(245, 245, 245);
   font-size: 4rem;
   margin: 0 0 2rem 0;
+  z-index: 1;
+  animation: fade 1.9s ease-in;
+}
+/* keyframes */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
 }
 
 .btn-github {
-  width: 85px;
+  width: 100px;
   height: 35px;
   border-radius: 20px;
   border: none;
   margin-right: 10px;
   font-family: "Roboto Slab", serif;
+  text-align: center;
+  font-weight: 700;
+  animation: fade 1.9s ease-in;
 }
 
 .btn-linkedin {
-  width: 85px;
+  width: 100px;
   height: 35px;
   border-radius: 20px;
   border: none;
   font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  text-align: center;
+  animation: fade 1.9s ease-in;
 }
 
 .btn-github:hover {
   cursor: pointer;
-  transition: all 0.5s ease-out;
-  background-color: rgba(25, 194, 206, 0.7);
+  transition: all 0.5s ease-in;
+  background-color: rgba(255, 255, 255, 0.541);
 }
 .btn-linkedin:hover {
   cursor: pointer;
-  transition: all 0.5s ease-out;
-  background-color: rgba(11, 44, 235, 0.7);
+  transition: all 0.5s ease-in;
+  background-color: rgba(72, 96, 228, 0.7);
 }
 .btn-hero {
   font-size: 1rem;
@@ -202,6 +218,11 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+.project_image {
+  width: 350px;
+  transition: transform 250ms ease-in;
+  text-align: center;
+}
 .project_image:hover {
   transform: scale(0.95);
   transform-origin: center;
@@ -218,10 +239,6 @@ a:hover {
   border-radius: 5px;
   padding-top: 2rem;
   color: #fff;
-}
-.project_image {
-  width: 450px;
-  transition: transform 250ms ease-in;
 }
 
 /* contact section */
@@ -324,48 +341,47 @@ a:hover {
 }
 
 /* Media queries */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-  .navbar {
-    width: 375px;
+@media only screen and (max-width: 414px) {
+  .hero_section {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
   }
-  .about_section {
-    height: auto;
-  }
+  /* .about_section{
+  height: auto;
+} */
   .about_content {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .about_image_content {
-    width: 100%;
-  }
-  .text_about {
-    width: 100%;
-    padding: 3px;
-    margin-top: 0.5rem;
-  }
-  .tech_section {
-    width: 375px;
-    height: 750px;
-  }
-  .image_container {
-    justify-content: center;
-  }
-  .project_menu {
-    margin: 0;
-    flex-direction: column;
-  }
-  .projects_section {
-    flex-wrap: wrap;
-  }
-  .project_image {
-    width: 100%;
-    margin: auto;
-  }
-  .projects_list {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .text_about {
+    padding: 0;
+    line-height: 1;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .tech_section {
+    height: auto;
+  }
+  .image_container {
+    height: auto;
     justify-content: center;
+  }
+  .projects_section {
+    height: auto;
+  }
+  .project_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .projects_list {
+    max-width: 100%;
+  }
+  .project_image {
+    width: 70%;
   }
 }

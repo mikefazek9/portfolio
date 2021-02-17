@@ -1,17 +1,23 @@
-import React from "react";
+import React,{useEffect} from "react";
 import portImg from "../img/bkgry.jpg";
-export default function About(props) {
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+const About = (props)=> {
+  useEffect(()=>{
+    Aos.init({disable:'phone', duration: 2000})
+  },[]);
   return (
     <div className="about_section">
     
-      <h2 className="about_title">{props.title}</h2>
+      <h2 data-aos="fade-up" className="about_title">{props.title}</h2>
       <div className="about_content">
         <div className="about_image_content">
-          <img src={portImg} alt="Michael Fazekas" className="image_me" />
-          <h3 className="me_title">Mike Fazekas</h3>
-          <span className="bold-text">Front-End Developer</span>
+          <img data-aos="fade-right" src={portImg} alt="Michael Fazekas" className="image_me" />
+          <h3 data-aos="fade-right" className="me_title">Mike Fazekas</h3>
+          <span data-aos="fade-right" className="bold-text">Front-End Developer</span>
         </div>
-        <div className="text_about">
+        <div data-aos="fade-left" className="text_about">
           <p>
             I am a Self-taught Developer that specializes in Front-End
             Development with a Focus on MERN Stack Technologies. I have the
@@ -32,3 +38,4 @@ export default function About(props) {
     </div>
   );
 }
+export default About;

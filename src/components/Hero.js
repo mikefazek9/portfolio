@@ -1,5 +1,5 @@
 import React from "react";
-
+// import video from "../img/blue.mp4"
 const Hero = (props) => {
   const social = {
     twitter: "https://twitter.com/mike_fazek",
@@ -14,6 +14,9 @@ const Hero = (props) => {
       <div className="links">
         <button className="btn-github"><a href={social.github} className="btn-hero">{props.github}</a></button>
         <button className="btn-linkedin"><a href={social.linkedIn} className="btn-hero">{props.linkedIn}</a></button>
+        {/* <video autoPlay loop muted className="video">
+          <source src={video} type="video/mp4"/>
+        </video> */}
       </div>
     </div>
   );
